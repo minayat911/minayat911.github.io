@@ -1595,6 +1595,144 @@ header .logo a {
 	}
 }
 
+/** 
+ * ===================================================================
+ * 05. forms - (_forms.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+ fieldset {
+	border: none;
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+	display: block;
+	height: 6rem;
+	padding: 1.5rem 0;
+	border: 0;
+	outline: none;
+	vertical-align: middle;
+	color: #313131;
+	font-family: "poppins-regular", sans-serif;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	max-width: 100%;
+	background: transparent;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.ss-custom-select {
+	position: relative;
+	padding: 0;
+}
+.ss-custom-select select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	margin: 0;
+	line-height: 3rem;
+	vertical-align: middle;
+}
+.ss-custom-select select option {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.ss-custom-select select::-ms-expand {
+	display: none;
+}
+.ss-custom-select::after {
+	content: '\f0d7';
+	font-family: 'FontAwesome';
+	position: absolute;
+	top: 50%;
+	right: 1.5rem;
+	margin-top: -10px;
+	bottom: auto;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 18px;
+	text-align: center;
+	pointer-events: none;
+	color: #252525;
+}
+
+/* IE9 and below */
+.oldie .ss-custom-select::after {
+	display: none;
+}
+textarea {
+	min-height: 25rem;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+	color: #cc005f;
+	border-bottom: 1px solid #FF0077;
+}
+label, legend {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.4rem;
+	margin-bottom: .6rem;
+	color: #3b3b3b;
+	display: block;
+}
+input[type="checkbox"], input[type="radio"] {
+	display: inline;
+}
+label > .label-text {
+	display: inline-block;
+	margin-left: 1rem;
+	font-family: "poppins-regular", sans-serif;
+	line-height: inherit;
+}
+label > input[type="checkbox"], label > input[type="radio"] {
+	margin: 0;
+	position: relative;
+	top: .15rem;
+}
+
+/**
+ * Style Placeholder Text  
+ * -
+ */
+::-webkit-input-placeholder {
+	color: #a1a1a1;
+}
+:-moz-placeholder {
+	color: #a1a1a1;  /* Firefox 18- */
+}
+::-moz-placeholder {
+	color: #a1a1a1;  /* Firefox 19+ */
+}
+:-ms-input-placeholder {
+	color: #a1a1a1;
+}
+.placeholder {
+	color: #a1a1a1 !important;
+}
+
 
 /** 
  * ===================================================================
@@ -1617,9 +1755,155 @@ header .logo a {
 	color: rgba(255, 255, 255, 0.7);
 }
 
+.contact-form {
+	max-width: 740px;
+}
+
+.contact-form ::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+.contact-form :-moz-placeholder {
+	color: rgba(255, 255, 255, 0.3);  /* Firefox 18- */
+}
+
+.contact-form ::-moz-placeholder {
+	color: rgba(255, 255, 255, 0.3);  /* Firefox 19+ */
+}
+.contact-form :-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+.contact-form .placeholder {
+	color: rgba(255, 255, 255, 0.3) !important;
+}
+
+#contact form {
+	margin-top: 0;
+	margin-bottom: 3rem;
+}
+#contact form .form-field {
+	position: relative;
+}
+#contact form .form-field:before, #contact form .form-field:after {
+	content: "";
+	display: table;
+}
+#contact form .form-field:after {
+	clear: both;
+}
+
+#contact form .form-field label {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.1rem;
+	line-height: 2.4rem;
+	position: absolute;
+	bottom: -1.2rem;
+	right: .6rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	padding: 0 2rem;
+	margin: 0;
+	color: #FFFFFF;
+	color: rgb(101, 107, 177);
+}
+#contact form .form-field label::after {
+	position: absolute;
+	left: -5px;
+	top: 50%;
+	margin-top: -6px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid rgb(101, 107, 177);
+	content: "";
+}
+
+#contact input[type="text"],
+#contact input[type="password"],
+#contact input[type="email"],
+#contact textarea {
+	width: 100%;
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 0;
+	border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#contact input[type="text"],
+#contact input[type="password"],
+#contact input[type="email"] {
+	height: 6.6rem;
+	padding: 1.8rem 2rem;
+}
+#contact input[type="text"]:focus,
+#contact input[type="password"]:focus,
+#contact input[type="email"]:focus {
+	border-color: rgb(101, 107, 177);
+	color: #FFFFFF;
+}
+
+#contact textarea {
+	min-height: 20rem;
+	padding: 1.8rem 2rem;
+}
+#contact textarea:focus {
+	border-color: rgb(101, 107, 177);
+	color: #FFFFFF;
+}
+#contact button.submitform {
+	font-size: 1.5rem;
+	display: block;
+	letter-spacing: .2rem;
+	height: 6.6rem;
+	line-height: 6.6rem;
+	padding: 0 3rem;
+	margin-top: 4.8rem;
+	width: 100%;
+	background: rgb(101, 107, 177);
+	color: #FFFFFF;
+}
+#contact button.submitform:hover, #contact button.submitform:focus {
+	background: rgb(101, 107, 177);
+}
+#message-warning, #message-success {
+	display: none;
+	background: #0d0d0d;
+	border-radius: 3px;
+	padding: 3rem;
+	margin-bottom: 3.6rem;
+	width: 100%;
+}
+#message-warning {
+	color: rgb(101, 107, 177);
+}
+#message-success {
+	color: rgb(101, 107, 177);
+}
+#message-warning i, #message-success i {
+	margin-right: 10px;
+}
+
 
 /* form loader */
 
+#submit-loader {
+	display: none;
+	position: relative;
+	left: 0;
+	top: 1.8rem;
+	width: 100%;
+	text-align: center;
+}
+#submit-loader .text-loader {
+	display: none;
+	font-family: "poppins-bold", sans-serif;
+	color: #FFFFFF;
+	letter-spacing: .3rem;
+	text-transform: uppercase;
+}
+.oldie #submit-loader .s-loader {
+	display: none;
+}
+.oldie #submit-loader .text-loader {
+	display: block;
+}
 .contact-info {
 	margin: 4.8rem auto 0;
 	font-family: "poppins-regular", sans-serif;
