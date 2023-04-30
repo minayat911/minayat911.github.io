@@ -117,7 +117,8 @@
    			<div class="intro-info">
 
    				<p class="lead">
-					I am a final year Computer Engineering Student at Memorial University of Newfoundland. I am passionate and curious about software development and computer programming.
+					I am a recent Computer Engineering graduate from Memorial University of Newfoundland. I am passionate and curious about software development and computer programming.
+					Iam currently looking for full-time opportunities in Software Development, Testing, and Quality Assurance.
 					<br> 
 					Keep scrolling to learn more about me or download my CV 🙂
 				</p>
@@ -610,9 +611,26 @@
 		         </div>		                  
 	      	</div>
 
-			  <div class="pull-right"> 
-				<span style="color:white;">Updated: 29 April 2023</span>
+			<!-- <div class="pull-right"> 
+				<span style="color:white;">Updated: 30 April 2023</span>
+			</div> -->
+
+			<div class="pull-right">
+				<span id="update-text" style="color:white;"></span>
 			</div>
+			  
+			<script>
+			// Get today's date and format it
+			var today = new Date();
+			var day = today.getDate();
+			var month = today.toLocaleString('default', { month: 'long' });
+			var year = today.getFullYear();
+			var formattedDate = day + ' ' + month + ' ' + year;
+			
+			// Update the "Updated" text with today's date
+			var updateText = document.getElementById('update-text');
+			updateText.textContent = 'Updated: ' + formattedDate;
+			</script>
 	
 
 	      	<div id="go-top">
