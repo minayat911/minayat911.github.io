@@ -1757,6 +1757,7 @@ label > input[type="checkbox"], label > input[type="radio"] {
 
 .contact-form {
 	max-width: 740px;
+	margin-top: 250px;
 }
 
 .contact-form ::-webkit-input-placeholder {
